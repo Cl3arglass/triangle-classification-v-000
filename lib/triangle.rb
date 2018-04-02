@@ -6,6 +6,9 @@ class Triangle
   end
 
   def kind
+    if @side1 == 0 && @side2 == 0 && @side3 == 0
+      raise TriangleError
+    end
   end
 
   class TriangleError < StandardError
